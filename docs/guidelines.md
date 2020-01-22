@@ -17,7 +17,7 @@ We build web services according to [REST](rest.md) on HTTP, aiming to a [high ma
 * A stateless request model.
 
 
-[We build the API around business flows](rest.md#organize-the-API-around-resources). We avoid creating APIs that simply mirror the internal database structure.
+We avoid creating APIs that simply mirror the internal database structure. On the contrary, [we build APIs around business flows](rest.md#organize-the-API-around-resources), trying to keep the [most convenient granularity level](granularity-level.md), neither too chatty nor too coarse-grained.
 
 We strive to adopt a [consistent naming convention](rest.md#naming-conventions).
 

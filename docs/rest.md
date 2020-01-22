@@ -20,7 +20,7 @@ https://mycompany.com/api/orders/12
 }
 ```
 
-* Hypermedia links: the REST API is driven by hypermedia links that are contained in the representation. For example, the following shows a JSON representation of the above URI including the Hypermedia links. It contains links to get or update the associated customer and items:
+* Hypermedia links: the REST API is driven by hypermedia links that are contained in the representation. Once an application has a reference to a resource, it should be possible to use this reference to find items related to that resource. For example, the following shows a JSON representation of the above URI including the Hypermedia links. It contains links to get or update the associated customer and items. 
 
 ```JSON
 {
@@ -33,6 +33,8 @@ https://mycompany.com/api/orders/12
     "items": "https://mycompany.com/api/orders/12/items"
 }
 ```
+
+
 See [Microsoft - Use HATEOAS to enable navigation to related resources](https://docs.microsoft.com/en-us/azure/architecture/best-practices/api-design#use-hateoas-to-enable-navigation-to-related-resources)
 
 * A uniform interface based on HTTP *verbs* (`GET`, `POST`, `DELETE`, etc)
