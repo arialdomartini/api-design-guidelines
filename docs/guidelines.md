@@ -8,13 +8,14 @@ A well designed Web API should aim to support:
 
 
 ## REST
-We design web services according to [REST](rest.md) on HTTP.
+We build web services according to [REST](rest.md) on HTTP, aiming to a [high maturity level](rest.md#maturity-model).  designed around:
 
-* Hypermedia
-* *Resources* with URI as unique *identifiers* like `https://mycompany.com/api/orders/12`
-* Clients exchange *representations* of resources states, using JSON.
-* Operations are communicated using HTTP *verbs* (`GET`, `POST`, `DELETE`, etc)
-* A stateless request model
+* *Resources* with URI as unique *identifiers* like `https://mycompany.com/api/orders/12`;
+* Clients exchange *representations* of resources states, using JSON;
+* Hypermedia links, included in the representation for the API navigation;
+* Operations communicated using HTTP *verbs* (`GET`, `POST`, `DELETE`, etc)
+* A stateless request model.
 
 ## References
-[Microsoft Azure Web API design](https://docs.microsoft.com/en-us/azure/architecture/best-practices/api-design)
+[Microsoft - Web API design](https://docs.microsoft.com/en-us/azure/architecture/best-practices/api-design)
+[Martin Fowler - Richardson Maturity Model](https://martinfowler.com/articles/richardsonMaturityModel.html)
