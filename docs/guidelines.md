@@ -19,6 +19,8 @@ We build web services according to [REST](rest.md) on HTTP, aiming to a [high ma
 
 [We build the API around business flows](rest.md#organize-the-API-around-resources). We avoid creating APIs that simply mirror the internal database structure.
 
+We strive to adopt a [consistent naming convention](rest.md#naming-conventions).
+
 ## References
 [Microsoft - Web API design](https://docs.microsoft.com/en-us/azure/architecture/best-practices/api-design)
 [Martin Fowler - Richardson Maturity Model](https://martinfowler.com/articles/richardsonMaturityModel.html)
