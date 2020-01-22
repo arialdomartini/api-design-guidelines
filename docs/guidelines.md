@@ -10,7 +10,7 @@ A well designed Web API should aim to support:
 ## REST
 We build web services according to [REST](rest.md) on HTTP, aiming to a [high maturity level](rest.md#maturity-model).  designed around:
 
-* *Resources* with URI as URIs like `https://mycompany.com/api/orders/12` that plays the role of unique identifiers;
+* *Resources* with URI as URIs like `https://my-company.com/api/orders/12` that plays the role of unique identifiers;
 * Clients exchange *representations* of resources states, using JSON;
 * Hypermedia links, included in the representation for the API navigation;
 * Operations communicated using HTTP *verbs* (`GET`, `POST`, `DELETE`, etc)
