@@ -22,5 +22,6 @@ We build web services according to [REST](rest.md) on HTTP, aiming to a [high ma
 We strive to adopt a [consistent naming convention](rest.md#naming-conventions).
 
 ## References
-[Microsoft - Web API design](https://docs.microsoft.com/en-us/azure/architecture/best-practices/api-design)
-[Martin Fowler - Richardson Maturity Model](https://martinfowler.com/articles/richardsonMaturityModel.html)
+* [Microsoft - Web API design](https://docs.microsoft.com/en-us/azure/architecture/best-practices/api-design)
+* [Martin Fowler - Richardson Maturity Model](https://martinfowler.com/articles/richardsonMaturityModel.html)
+* [Microsoft - Use HATEOAS to enable navigation to related resources](https://docs.microsoft.com/en-us/azure/architecture/best-practices/api-design#use-hateoas-to-enable-navigation-to-related-resources)

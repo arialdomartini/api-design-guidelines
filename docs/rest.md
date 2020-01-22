@@ -33,6 +33,7 @@ https://mycompany.com/api/orders/12
     "items": "https://mycompany.com/api/orders/12/items"
 }
 ```
+See [Microsoft - Use HATEOAS to enable navigation to related resources](https://docs.microsoft.com/en-us/azure/architecture/best-practices/api-design#use-hateoas-to-enable-navigation-to-related-resources)
 
 * A uniform interface based on HTTP *verbs* (`GET`, `POST`, `DELETE`, etc)
 
