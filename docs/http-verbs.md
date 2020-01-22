@@ -16,6 +16,8 @@ Resources needn't support all the verbs.
 
 The effect of a specific request should depend on wheter the resouce is a collection or an individual item. For example, a `[DELETE]` call to `/api/items` would delete the whole collection of items.
 
+## Example
+
 | Resource                | POST                               | GET                                     | PUT                                        | DELETE                                     |
 | ----------------------- |------------------------------------| ----------------------------------------|--------------------------------------------|--------------------------------------------|
 | `/customers`            | Create a new customer              | Retrieves all customers                 | Bulk update all customers                  | Delete all customers                       |
