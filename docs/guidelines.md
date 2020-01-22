@@ -13,7 +13,7 @@ We build web services according to [REST](rest.md) on HTTP, aiming to a [high ma
 * *Resources* with URI as URIs like `https://my-company.com/api/orders/12` that plays the role of unique identifiers;
 * Clients exchange *representations* of resources states, using JSON;
 * Hypermedia links, included in the representation for the API navigation;
-* Operations communicated using HTTP *verbs* (`GET`, `POST`, `DELETE`, etc)
+* [Operations communicated using HTTP *verbs*](http-verbs.md) (`GET`, `POST`, `DELETE`, etc)
 * A stateless request model.
 
 We avoid creating APIs that simply mirror the internal database structure. On the contrary, [we build APIs around business flows](rest.md#organize-the-API-around-resources), trying to keep the [most convenient granularity level](granularity-level.md), neither too chatty nor too coarse-grained.

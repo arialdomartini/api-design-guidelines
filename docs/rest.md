@@ -37,7 +37,7 @@ https://mycompany.com/api/orders/12
 
 See [Microsoft - Use HATEOAS to enable navigation to related resources](https://docs.microsoft.com/en-us/azure/architecture/best-practices/api-design#use-hateoas-to-enable-navigation-to-related-resources)
 
-* A uniform interface based on HTTP *verbs* (`GET`, `POST`, `DELETE`, etc)
+* [A uniform interface based on HTTP *verbs*](http-verbs.md) (`GET`, `POST`, `DELETE`, etc)
 
 * A stateless request model, without keeping transient state information between requests. The only place where information is stored is in the resources themselves, and each request should be an atomic operation. Any server can handle any request from any client.
 
