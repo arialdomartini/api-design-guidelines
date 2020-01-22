@@ -24,3 +24,26 @@ The effect of a specific request should depend on wheter the resouce is a collec
 | `/customers/1`          | Unsupported/Error                  | Retrieves specific customer             | Update specific customer                   | Delete specific customer                   |
 | `/customers/1/orders`   | Create order for specific customer | Get orders of specific customer         | Bulk update orders of specific customer    | Delete all orders of specific customer     |
 | `/customers/1/orders/2` | Unsupported/Error                  | Get specific order of specific customer | Update specific order of specific customer | Delete specific order of specific customer |
+
+
+## Difference between POST, PUT and PATCH
+
+The difference between `POST`, `PUT` AND `PATCH` is subtle and can be confusing.
+
+* A `POST` creates a resource letting the server assign the URI. The URI of the created resource is returned to the client with a hypermedia links. When the client invokes `POST`, the resulting URI of the resource is still unknown.
+* A `PUT` creates or updates a resource whose URI is known to the client. 
+  * If no resource exists at the provided URI, the resource is created
+  * If a resouce exists at the provided URI, the resource is updated.
+
+  In either cases, when the client invoked `PUT`, the resource's URI is known.
+
+Usually `POST` and `PUT` are invoked against the URI of a collection: in this case, the new resource is added to the collection.
+
+Support creation via `PUT` is optional and depends on:
+
+* whether the client can meaningfully assign a URI to a resource before it exists;
+* the associated implementation cost.
+
+`GET`, `PUT` and `PATCH` should be idempotent: if a client submits the same `GET` or `PUT` request multiple time, the results should always be the same (the same resource is returned/the same resource is modified with the same values`.
+
+`POST` and `DELETE` are not guaranteed to be idempotent.
