@@ -50,3 +50,24 @@ The [Maturity Model](https://martinfowler.com/articles/richardsonMaturityModel.h
 Level 3 corresponds to a truly RESTful API according to Roy Fielding's definition. In pracice, may published Web APIs fall somethere around Level 2.
 
 We generally aim to design APIs of the highest level, but we compromise to use the Level 2 accordinging to the circumstances.
+
+## Organize the API around resources
+We focus on the business entitites that the Web API exposes. 
+
+
+### URIs
+Resource URIs are based on nouns (the resource) and not verbs (the operations on the resouce). For example:
+
+```
+[POST] https://mycompany.com/orders        // Good
+[POST] https://mycompany.com/create-order  // Avoid
+```
+
+A resource doesn't have to be based on a single pthisical data item. For example, an order resource might be implemented internally as several tables in a database, but presented to the client as a single entity. We avoid creating APIs that simply mirror the internal structure of a database. A client should not be exposed to the internal implementation.
+
+### Collections
+Entities can be grouped together into collections. A collection is a pearatate resource from the item withing the collection, and therefore it must have its own identifier URI. For example, the following might represent the collection of orders:
+
+```
+https://mycompany.com/orders"
+```
