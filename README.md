@@ -1,2 +1,4 @@
-API Design Guidelines
-=====================
+REST API Design Guidelines
+==========================
+
+[Guidelines](docs/guidelines.md)
