@@ -57,6 +57,39 @@ We generally aim to design APIs of the highest level, but we compromise to use t
 ## Organize the API around resources
 We focus on the business entitites that the Web API exposes. 
 
+### Pseudo resources
+A Web API that implements simple calculator operations such as add and substract could provide URIs that expose these operations as pseudo resources and use the query string to specify the parameters required. For example, a `GET` to the URI 
+
+```
+/add?operand1=99&operand2=1
+```
+
+would return a response message with the body containing the value 100. However, we strive to use these forms of URIs as sparingly as possible. 
+
+We rather prefere to `POST` the payload
+
+```json
+{
+    "operand1": 99,
+    "operand2": 1
+}
+```
+
+to
+
+```
+/addition
+```
+
+and get back the pseudo-resource
+
+```
+{
+    "result": 100
+}
+```
+
+
 
 ### Naming conventions
 
