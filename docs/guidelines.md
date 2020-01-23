@@ -18,8 +18,12 @@ We build web services according to [REST](rest.md) on HTTP, aiming to a [high ma
 
 We avoid creating APIs that simply mirror the internal database structure. On the contrary, [we build APIs around business flows](rest.md#organize-the-API-around-resources), trying to keep the [most convenient granularity level](granularity-level.md), neither too chatty nor too coarse-grained.
 
-
 We strive to adopt a [consistent naming convention](rest.md#naming-conventions).
+
+### Media types
+About [media types](media-types.md), for non-binary payload we default to JSON (`application/json`).
+
+The client can use the HTTP Header field `Content-Type` to request a different media type. If the server doesn't support it, it will return `415 Unsupported Media Type`.
 
 ## References
 * [Microsoft - Web API design](https://docs.microsoft.com/en-us/azure/architecture/best-practices/api-design)
