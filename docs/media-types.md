@@ -29,6 +29,8 @@ GET https://my-company.com/orders/2 HTTP/1.1
 Accept: application/json,application/xml
 ```
 
+It the server cannot match any of the media types, it should return `406 Not Acceptable`.
+
 The list of default media type is available on [MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Content_negotiation/List_of_default_Accept_values). 
 
 Services are generally required to support at least `application/json`. All other media types are supported based on the specific business or technical needs.
