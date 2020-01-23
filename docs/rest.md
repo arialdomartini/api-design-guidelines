@@ -41,18 +41,10 @@ See [Microsoft - Use HATEOAS to enable navigation to related resources](https://
 
 * A stateless request model, without keeping transient state information between requests. The only place where information is stored is in the resources themselves, and each request should be an atomic operation. Any server can handle any request from any client.
 
-
 ## Maturity Model
-The [Maturity Model](https://martinfowler.com/articles/richardsonMaturityModel.html) defines the following levels for Web APIs:
+We generally aim to design tryly RESTful APIs of the highest level of the [Maturity Model](maturity-model.md), where the state change is driven by consuming hypermedia links (HATEOAS)
 
-* Level 0: the API defines one single URI, accessed via `POST`; all operations are specified in the body.
-* Level 1: the API defines separate URIs for individual resources.
-* Level 2: operations on resources are defined using HTTP methods
-* Level 3: the state change is driven by consuming hypermedia links (HATEOAS)
-
-Level 3 corresponds to a truly RESTful API according to Roy Fielding's definition. In pracice, may published Web APIs fall somethere around Level 2.
-
-We generally aim to design APIs of the highest level, but we compromise to use the Level 2 accordinging to the circumstances.
+Nontheless, we are open to relaxing the constraints accordinging to the circumstances.
 
 ## Organize the API around resources
 We focus on the business entitites that the Web API exposes. 
