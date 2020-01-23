@@ -25,6 +25,10 @@ About [media types](media-types.md), for non-binary payload we default to JSON (
 
 The client can use the HTTP Header field `Content-Type` to request a different media type. If the server doesn't support it, it will return `415 Unsupported Media Type`.
 
+
+### HTTP Status Codes
+We use HTTP Status Codes to convey information about the processed operation, sticking to a consistent semantic. The list of HTTP Status Codes and the meaning we assign them is listed in [HTTP Status Codes](http-status-codes.md).
+
 ## References
 * [Microsoft - Web API design](https://docs.microsoft.com/en-us/azure/architecture/best-practices/api-design)
 * [Martin Fowler - Richardson Maturity Model](https://martinfowler.com/articles/richardsonMaturityModel.html)
