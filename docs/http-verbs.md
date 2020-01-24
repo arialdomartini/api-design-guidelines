@@ -50,13 +50,33 @@ Support creation via `PUT` is optional and depends on:
 
 
 ## Supported verbs
+All operations should return a set of [standard HTTP Status Code in case of failure](failures.md).
+
+In addition, each verb support the following.
+
 ### GET
 A successful `GET` returns `200 OK`; the body generally contains the resource.
 
 If the resource cannot be found, `GET` returns `404 Not Found`. The body may contain some detail.
 
-When the resource cannot be accessed, the returned status code depends on [security concerns](security.md#get):
 
-* if authentication was required and the user provided none, the API returns `401 Unauthorized`
-* if the user is authenticated but does not have the rights to access that resource, we generally return `404 Not Found`. [We prefer not to return `403 Forbidden`](security.md#authenticated-users-and-private-information).
+### POST
+A successful `POST` returns `201 Created`. The response body contains either
 
+* the whole created resource
+* a subset of its attributes, in case the payload would be too big.
+
+In either case, the response includes the URI of the created resource. 
+
+### PUT
+
+A successfull `PUT` returns:
+
+* `201 Created` like a `POST` when a resource is created
+* `204 No Content` when a resource has been updated.
+
+The response body can contain the resulting resource. In that case, it should include the URI to the resource itself, as an hypermedia link.
+
+
+### DELETE
+A successful `DELETE` returns `204 No Content`. 
