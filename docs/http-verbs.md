@@ -47,3 +47,16 @@ Support creation via `PUT` is optional and depends on:
 `GET`, `PUT` and `PATCH` should be idempotent: if a client submits the same `GET` or `PUT` request multiple time, the results should always be the same (the same resource is returned/the same resource is modified with the same values`.
 
 `POST` and `DELETE` are not guaranteed to be idempotent.
+
+
+## Supported verbs
+### GET
+A successful `GET` returns `200 OK`; the body generally contains the resource.
+
+If the resource cannot be found, `GET` returns `404 Not Found`. The body may contain some detail.
+
+When the resource cannot be accessed, the returned status code depends on [security concerns](security.md#get):
+
+* if authentication was required and the user provided none, the API returns `401 Unauthorized`
+* if the user is authenticated but does not have the rights to access that resource, we generally return `404 Not Found`. [We prefer not to return `403 Forbidden`](security.md#authenticated-users-and-private-information).
+
