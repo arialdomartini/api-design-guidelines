@@ -90,4 +90,4 @@ Given the high code complexity in supporting `PATCH`, we usually opt for giving 
 
 
 ### DELETE
-A successful `DELETE` returns `204 No Content`. 
+A successful `DELETE` returns `204 No Content`, with an empty body.
