@@ -78,5 +78,16 @@ A successfull `PUT` returns:
 The response body can contain the resulting resource. In that case, it should include the URI to the resource itself, as an hypermedia link.
 
 
+### PATCH
+With a `PATCH` request, the client sends a set of updates to an existing resource, in the form of a *patch document*. The patch document doesn't describe the whole resource, but only a set of changes to apply.
+
+There are 2 main formats of patch documents:
+
+* [JSON Merge Patch](json-merge-patch.md): the payload has the same structure as the original JSON resource, but it includes just the subset of fields that should be added or changed
+* [JSON Patch](json-patch.md): the payload specifies the changes as a sequence of operations to apply (like add, remove, replace, copy and test).
+
+Given the high code complexity in supporting `PATCH`, we usually opt for giving it no support. In case there are pressing needs to support `PATCH`, we first evaluate if JSON Merge Patch can suffice. Only as a last resort, we opt for JSON Patch.
+
+
 ### DELETE
 A successful `DELETE` returns `204 No Content`. 

@@ -33,3 +33,6 @@ We use HTTP Status Codes to convey information about the processed operation, st
 * [Microsoft - Web API design](https://docs.microsoft.com/en-us/azure/architecture/best-practices/api-design)
 * [Martin Fowler - Richardson Maturity Model](https://martinfowler.com/articles/richardsonMaturityModel.html)
 * [Microsoft - Use HATEOAS to enable navigation to related resources](https://docs.microsoft.com/en-us/azure/architecture/best-practices/api-design#use-hateoas-to-enable-navigation-to-related-resources)
+* [JSON Merge Patch - RFC 7396](https://tools.ietf.org/html/rfc7396)
+* [JSON Patch - RFC 6902](https://tools.ietf.org/html/rfc6902)
+* [jsonpatch.com](http://jsonpatch.com/)
