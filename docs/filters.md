@@ -11,7 +11,17 @@ The API can allow passing a filter in the query string of the URI, such as:
 
 The Web API is then responsible for parsing and handling the `minCost` and `status` parameters and returning the filtered results on the server side.
 
-Where it makes sense, URIs can also support query strings that specify the maximum number of items to retrieve. Where possible, we extend this approach to support pagination.
+Where it makes sense, URIs can also support query strings that specify the maximum number of items to retrieve:
+
+```
+/orders?limit=25
+```
+
+Where possible, we extend this approach to support pagination:
+
+```
+/orders?limit=25&offset=50
+```
 
 In any case, the URIs that are likely to return large amount of data are designed to have an upper limit on the number of items or on the size of the payload.
 
