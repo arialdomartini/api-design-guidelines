@@ -25,9 +25,11 @@ About [media types](media-types.md), for non-binary payload we default to JSON (
 
 The client can use the HTTP Header field `Content-Type` to request a different media type. If the server doesn't support it, it will return `415 Unsupported Media Type`.
 
-
 ### HTTP Status Codes
 We use HTTP Status Codes to convey information about the processed operation, sticking to a consistent semantic. The list of HTTP Status Codes and the meaning we assign them is listed in [HTTP Status Codes](http-status-codes.md).
+
+### Asynchronous Operations
+Sometimes, operations might require processing that takes a while to complete. Rather than forcing the client to wait for completion before sending a response (which would cause unacceptable latency), we prefer to [make the operation asynchronous](asynchronous-operations.md), exposing endpoint that return the status of asynchronous requests so the client can monitor the status by polling it. Where possible, we promote the use of Web Hooks.
 
 ## References
 * [Microsoft - Web API design](https://docs.microsoft.com/en-us/azure/architecture/best-practices/api-design)
