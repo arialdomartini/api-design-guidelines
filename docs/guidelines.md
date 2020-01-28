@@ -32,9 +32,11 @@ We use HTTP Status Codes to convey information about the processed operation, st
 Sometimes, operations might require processing that takes a while to complete. Rather than forcing the client to wait for completion before sending a response (which would cause unacceptable latency), we prefer to [make the operation asynchronous](asynchronous-operations.md), exposing endpoint that return the status of asynchronous requests so the client can monitor the status by polling it. Where possible, we promote the use of Web Hooks.
 
 ### Filter and paginate data
-We hold back from providing clients too large amount of data when only a subset of the information is required. For example, suppose a client needs to find all orders with a cost over a specifid value. It might either retrieve all orders from `/orders` and the filter these orders on the client side, or let the server do the filtering. We promote the latter over the former. When an API can possibly return large amount of data, we design the endpoints to allow passing filters and pagination directives in the query string. 
+We hold back from providing clients too large amount of data when only a subset of the information is required. For example, suppose a client needs to find all orders with a cost over a specifid value. It might either retrieve all orders from `/orders` and the filter these orders on the client side, or let the server do the filtering. We promote the latter over the former. When an API can possibly return large amount of data, we design the endpoints to allow [passing filters](filters.md) and pagination directives in the query string. 
 
 In any case, in order to protect the APIs, we design them to have an upper limit to the possible amount of data handled.
+
+We consider using GraphQL as a viable approach.
 
 ## References
 * [Microsoft - Web API design](https://docs.microsoft.com/en-us/azure/architecture/best-practices/api-design)
