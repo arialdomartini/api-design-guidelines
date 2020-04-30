@@ -3,6 +3,7 @@
 | `201 Created`                | The resource has been successfully created. The created resource is included in the response body                                             |
 | `200 OK`                     | The requested resource has been found and returned in the response body                                                                       |
 | `200 No Content`             | The resource has been successfully created. No resource is included in the responde body                                                      |
+| `206 Partial Content`        | The requested resource has been found and a chunk of it is returned in the response body                                                      |
 | `401 Unauthorized`           | The client must authenticate                                                                                                                  |
 | `400 Bad Request`            | The data provided by the client is invalid. Additional information about the error might be included in the response body                     |
 | `422 Unprocessable Entity`   | The request is syntactically correct, but it cannot be processed due to semantic errors (i.e. the resource would be move to an invalid state) |

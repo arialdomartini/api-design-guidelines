@@ -10,4 +10,7 @@ The [Maturity Model](https://martinfowler.com/articles/richardsonMaturityModel.h
 
 Level 3 corresponds to a truly RESTful API according to Roy Fielding's definition. In pracice, may published Web APIs fall somethere around Level 2.
 
-We generally aim to design APIs of the highest level, but we compromise to use the Level 2 accordinging to the circumstances.
+We generally aim to design APIs of the highest level, but we compromise to use the Level 2 accordinging to the circumstances. Whenever possible, [we use HATEOAS]() to enable navigation to related resources.
+
+
+

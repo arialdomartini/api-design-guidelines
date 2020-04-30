@@ -38,6 +38,10 @@ In any case, in order to protect the APIs, we design them to have an upper limit
 
 We consider using GraphQL as a viable approach.
 
+### Partial responses for large binary resources
+For resources that may contain large binary fields, such as files or images, we support the `Accept-Ranges` header for GET requests. This allows the client to [retrieve the resource in chunks](partial-responses.md). We also consider [supporting HTTP HEAD requests](partial-responses.md#head-requests), for giving clients the possibility to determine whether to fetch a resource by using partial GET requests.
+
+
 ## References
 * [Microsoft - Web API design](https://docs.microsoft.com/en-us/azure/architecture/best-practices/api-design)
 * [Martin Fowler - Richardson Maturity Model](https://martinfowler.com/articles/richardsonMaturityModel.html)
